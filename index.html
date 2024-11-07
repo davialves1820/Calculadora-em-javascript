@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="style.css"> <!-- Link para o CSS -->
+</head>
+<body>
+    <!-- Conteúdo principal da página -->
+    <main>
+        <!-- Seção do display onde o resultado das operações será exibido -->
+        <section class="display" id="display">
+            <div class="caixa__resultado">
+                <!-- Exibe o valor acumulado e o operador atual -->
+                <p id="valor__acumulado" class="valor__acumulado"></p>
+                <!-- Exibe o resultado ou o valor atual inserido pelo usuário -->
+                <p id="resultado">0</p>
+            </div>
+        </section>
+
+        <!-- Contêiner para botões de números e operadores -->
+        <div class="container">
+            <!-- Seção com os botões numéricos de 0 a 9 e o ponto decimal -->
+            <section class="numeros">
+                <!-- Primeira linha de números: 1, 2 e 3 -->
+                <div class="linha">
+                    <button class="numero" id="botao-1" value="1" onclick="atualizarDisplay(1)">1</button>
+                    <button class="numero" id="botao-2" value="2" onclick="atualizarDisplay(2)">2</button>
+                    <button class="numero" id="botao-3" value="3" onclick="atualizarDisplay(3)">3</button>
+                </div>
+                
+                <!-- Segunda linha de números: 4, 5 e 6 -->
+                <div class="linha">
+                    <button class="numero" id="botao-4" value="4" onclick="atualizarDisplay(4)">4</button>
+                    <button class="numero" id="botao-5" value="5" onclick="atualizarDisplay(5)">5</button>
+                    <button class="numero" id="botao-6" value="6" onclick="atualizarDisplay(6)">6</button>
+                </div>
+                
+                <!-- Terceira linha de números: 7, 8 e 9 -->
+                <div class="linha">
+                    <button class="numero" id="botao-7" value="7" onclick="atualizarDisplay(7)">7</button>
+                    <button class="numero" id="botao-8" value="8" onclick="atualizarDisplay(8)">8</button>
+                    <button class="numero" id="botao-9" value="9" onclick="atualizarDisplay(9)">9</button>
+                </div>
+                
+                <!-- Quarta linha: botão para inverter o sinal (+/-), número 0 e o ponto decimal -->
+                <div class="linha">
+                    <button class="numero" onclick="inverterSinal()">+/-</button>
+                    <button class="numero" id="botao-0" value="0" onclick="atualizarDisplay(0)">0</button>
+                    <button class="numero" id="botao-." value="." onclick="atualizarDisplay('.')">.</button>
+                </div>
+            </section>
+
+            <!-- Seção com os botões dos operadores e operações adicionais -->
+            <section class="operadores">
+                <div class="coluna__operadores">
+                    <!-- Botões dos operadores matemáticos e ações (adição, subtração, multiplicação, divisão, limpar e igual) -->
+                    <button class="operador" id="botao-+" value="+" onclick="definirOperador('+')">+</button>
+                    <button class="operador" id="botao--" value="-" onclick="definirOperador('-')">-</button>
+                    <button class="operador" id="botao-*" value="*" onclick="definirOperador('*')">*</button>
+                    <button class="operador" id="botao-/" value="/" onclick="definirOperador('/')">/</button>
+                    
+                    <!-- Botão "C" para limpar/resetar a calculadora -->
+                    <button class="operador" id="botao-C" onclick="resetarCalculadora()">C</button>
+                    
+                    <!-- Botão "=" para calcular e exibir o resultado -->
+                    <button class="operador" onclick="calcularResultado()">=</button>
+                </div>
+            </section>
+        </div>
+    </main>
+
+    <!-- Importação do arquivo JavaScript que contém a lógica da calculadora -->
+    <script src="app.js"></script>
+</body>
+
+</html>

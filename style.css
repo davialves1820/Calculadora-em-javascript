@@ -1,0 +1,112 @@
+/* Define o box-sizing para incluir o padding e as bordas dentro do tamanho total dos elementos */
+* {
+    box-sizing: border-box;
+}
+
+/* Estilo geral para o body da página */
+body {
+    font-family: Arial, sans-serif; /* Define a fonte */
+    display: flex; /* Usa flexbox para centralizar o conteúdo */
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Define altura completa da janela */
+    background-color: #333; /* Cor de fundo escura */
+    color: #fff; /* Texto branco */
+    margin: 0;
+}
+
+/* Estilos para o contêiner principal */
+main {
+    background-color: #666; /* Fundo cinza para o contêiner */
+    padding: 20px;
+    border-radius: 8px; /* Bordas arredondadas */
+    text-align: center; /* Centraliza o texto */
+}
+
+/* Estilos para a área do display */
+.display {
+    margin-bottom: 20px; /* Espaço abaixo do display */
+}
+
+/* Estilos para a caixa que exibe o resultado */
+.caixa__resultado {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* Alinha o texto à direita */
+    width: 100%;
+    height: 50px;
+    background-color: rgba(223, 218, 218, 0.753); /* Fundo claro para contraste */
+    padding: 1px;
+    color: #333; /* Texto escuro */
+    font-size: 16px;
+    font-weight: 600; /* Texto em negrito */
+}
+
+/* Remove as margens padrão dos parágrafos e adiciona um espaço à direita */
+.caixa__resultado p {
+    margin: 0;
+    margin-right: 10px;
+}
+
+/* Contêiner para os botões */
+.container {
+    display: flex;
+    gap: 10px; /* Espaço entre seções de botões */
+}
+
+/* Configura as seções de números e operadores em coluna */
+.numeros, .operadores {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Alinha os botões numéricos e cria espaço entre as linhas */
+.numeros, .linha, .operadores {
+    display: flex;
+    justify-content: center;
+    margin-bottom: 5px;
+}
+
+/* Organiza os botões dos operadores em coluna */
+.coluna__operadores {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Estilos para os botões numéricos */
+.numeros button {
+    width: 50px; /* Largura dos botões numéricos */
+    height: 50px;
+    margin: 3px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ddd; /* Cor de fundo clara */
+    color: #333; /* Texto escuro */
+    cursor: pointer; /* Mostra o cursor de mão ao passar por cima */
+}
+
+/* Estilos para os botões dos operadores */
+.operadores button {
+    margin: 3px;
+    width: 40px; /* Largura menor para diferenciar dos botões numéricos */
+    height: 40px;
+    font-size: 18px;
+    border: none;
+    border-radius: 5px;
+    background-color: #ffa500; /* Cor laranja para destacar os operadores */
+    color: #333; /* Texto escuro */
+    cursor: pointer;
+}
+
+/* Efeito de hover para os botões: muda a cor de fundo ao passar o mouse */
+button:hover {
+    background-color: #ccc;
+}
+
+/* Estilos específicos para o texto que mostra o valor acumulado */
+.valor__acumulado {
+    font-size: 12px;
+    font-weight: 600;
+    color: #424242; /* Tom mais escuro para contraste */
+}
