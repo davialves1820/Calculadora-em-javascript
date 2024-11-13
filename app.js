@@ -26,8 +26,6 @@ function atualizarDisplay(numero) {
     // Se for o primeiro numero, reinicia o valor exibido
     if (primeiroNumero) {
 
-        document.getElementById('valor__acumulado').innerText = '';
-
         // Se o valor for ponto decimal, começa o valor com '0.'
         if (valorBotao == '.') {
             display.innerText = '0.';
@@ -40,6 +38,7 @@ function atualizarDisplay(numero) {
         primeiroNumero = false;
 
     } else {
+        
         // Se for o primeiro caractere e for um ponto, exibe '0.'
         if (valorBotao == '.' && display.innerText == '') {
             display.innerText = '0.';
