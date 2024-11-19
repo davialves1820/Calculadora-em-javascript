@@ -38,7 +38,7 @@ function atualizarDisplay(numero) {
         primeiroNumero = false;
 
     } else {
-        
+
         // Se for o primeiro caractere e for um ponto, exibe '0.'
         if (valorBotao == '.' && display.innerText == '') {
             display.innerText = '0.';
@@ -81,7 +81,7 @@ function definirOperador(operador) {
 function retornarValor() {
     // Mostra na tela o que foi efetuado
     document.getElementById('valor__acumulado').innerText = `${resultadoAcumulado} ${operadorAtual} ${valorAtual} = `;
-
+    
     // Faz o calculo de acordo com cada operador
     switch (operadorAtual) {
         case '+':
