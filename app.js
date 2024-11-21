@@ -64,11 +64,19 @@ function atualizarDisplay(numero) {
 
 // Função para definir o operador da operação e armazenar o valor atual
 function definirOperador(operador) {
-    // Após escolher a operação vai selecionar de novo o primeiro numero
-    primeiroNumero = true;
 
-    // Guarda o número anterior na variável
-    resultadoAcumulado = valorAtual;
+    // Verifica se já foi selecionado um operador e se o usuario já digitou o primeiro número
+    if (operadorAtual && !primeiroNumero) {
+        calcularResultado(); // Como o usuário selecionou os dois numeros e o operador, se calcula essa operação
+    } else { // Caso ele não tenha selecionado um operador ou já selecionou o primeiro numero
+        // Após escolher a operação vai selecionar de novo o primeiro numero
+        primeiroNumero = true;
+    }
+    // verifica se o operadorAtual está vazio, caso sim o resultadoAcumulado passa a ter o mesmo valord e valorAtual
+    if (!operadorAtual) {
+        // Guarda o número anterior na variável
+        resultadoAcumulado = valorAtual;
+    }
 
     // Salva o operador
     operadorAtual = operador;
@@ -105,7 +113,7 @@ function retornarValor() {
         default:
             return;
     }
-
+    
     // Atualiza o display com o resultado final
     atualizarConteudo(resultadoAcumulado);
 }
@@ -135,6 +143,7 @@ function resetarCalculadora() {
     // Inicializa com os valores padrão
     valorAtual = 0;
     resultadoAcumulado = 0;
+    operadorAtual = '';
     primeiroNumero = true;
     atualizarConteudo(valorAtual);
 
