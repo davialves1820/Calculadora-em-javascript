@@ -1,4 +1,4 @@
-Calculadora Simples
+**Calculadora Simples**
 Este é um projeto de uma calculadora simples que permite realizar as operações básicas: soma, subtração, multiplicação e divisão. O projeto é desenvolvido com HTML, CSS e JavaScript.
 
 Estrutura do Projeto
